@@ -8,6 +8,13 @@
 			"48":"icons/icon48.png",
 			"128":"icons/icon128.png"
 		},	
+	
+	"content_scripts":[
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["scripts/main.js"]
+		}
+	],
 
 	"browser_action":{
 		"default_title":"Hightlight content in web pages.",
@@ -22,7 +29,9 @@
 			"storage",
 			"tabCapture",
 			"tabs",
-			"contextMenus"
+			"contextMenus",
+			"http://*/*",
+			"https://*/*"
 		      ],
 	
 	"background": {
